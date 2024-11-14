@@ -6,7 +6,7 @@ hackrew is a framework for making character creator/dressup game applets a la [p
 
 ### Step 1: start a web server
 
-The applet won't run correctly unless it's launched from a server. To launch it from your own machine, cd into the hackrew folder, run ./serve.sh (you'll need [Python 3 installed on your machine](https://www.python.org/downloads/)) from the command line and navigate to [http://localhost:8000/](http://localhost:8000/) in your browser. Once you're done developing your character creator, you can host it on a remote server, like Neocities or Github Pages.
+The applet won't run correctly unless it's launched from a server. To launch it from your own machine, cd into the hackrew folder, run `./serve.sh` (you'll need [Python 3 installed on your machine](https://www.python.org/downloads/)) from the command line and navigate to [http://localhost:8000/](http://localhost:8000/) in your browser. Once you're done developing your character creator, you can host it on a remote server, like Neocities or Github Pages.
 
 ### Step 2: specify your parts
 The character creator applet's visual components are comprised of "parts" (ex: "body", "ears", "tail", "accessories"), which have varieties called "items" (ex: the items for ears are "small" and "big"). Each item is represented by a .png image with a transparent background. The applet allows the user to create different characters by layering different item .pngs on top of each other. 
