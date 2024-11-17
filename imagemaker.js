@@ -257,7 +257,7 @@ window.addEventListener('load', function(ev) {
 		itemsElements[i][0] = noneButton;
  	    }
 	    for (let j = 0; j < parts[i].items.length; j++) {
-		let item = document.createElement('li');
+		let item = document.createElement('button');
 		let itemIcon = document.createElement('img');
 		itemIcon.id = "icon_" + i.toString() + "_" + j.toString();
 		itemIcon.src = (assetsPath +
