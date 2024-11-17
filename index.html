@@ -15,15 +15,6 @@
 	<script src="imagemaker.js"></script>
 	<div id="image-maker" class="imagemaker">
 		<div class="imagemaker_container_wrapper">
-			<div id="info_wrap" class="imagemaker_info_wrapper">
-				<div class="imagemaker_info_content">
-					<p>
-						This builder is based on the open-source character creator
-						framework, <a target="_blank" href="https://github.com/ksadov/hackrew">hackrew<span
-								class="sr-only">(opens in a new window)</span></a>.
-					</p>
-				</div>
-			</div>
 			<div class="imagemaker_container">
 				<div class="imagemaker_canvas_wrapper">
 					<canvas id="my-canvas-object" width="600" height="600" aria-label="character preview"></canvas>
@@ -34,9 +25,9 @@
 						Loading...
 					</a>
 					<div class="imagemaker_ctrl_buttons">
-						<button id="items_button" class="button_show_itemlist"><span
+						<button id="items_button" class="button_show_itemlist" tabindex="0"><span
 								class="sr-only">Items</span></button>
-						<button id="palette_button" class="button_show_colorpalette"><span
+						<button id="palette_button" class="button_show_colorpalette" tabindex="0"><span
 								class="sr-only">Colors</span></button>
 					</div>
 				</div>
@@ -46,7 +37,7 @@
 							<ul id="parts_list">
 							</ul>
 						</div>
-						<button class="imagemaker_random_button" id="random_button">
+						<button class="imagemaker_random_button" id="random_button" tabindex="0">
 							Random
 						</button>
 					</div>
@@ -70,6 +61,15 @@
 	</div>
 	</main>
 	<footer>
+		<div id="info_wrap" class="imagemaker_info_wrapper">
+			<div class="imagemaker_info_content">
+				<p>
+					This builder is based on the open-source character creator
+					framework, <a target="_blank" href="https://github.com/ksadov/hackrew">hackrew<span
+							class="sr-only">(opens in a new window)</span></a>.
+				</p>
+			</div>
+		</div>
 	</footer>
 </body>
 
