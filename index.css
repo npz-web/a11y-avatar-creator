@@ -34,8 +34,8 @@
     box-sizing: border-box;
 }
 
-*:focus {
-    outline: 3px solid --focus-color;
+button:focus-visible, a:focus-visible {
+    outline: 3px solid var(--focus-color);
 }
 
 body {
