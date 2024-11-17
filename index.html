@@ -8,15 +8,14 @@
 </head>
 
 <body>
+	<script src="imagemaker.js"></script>
 	<header>
 		<h1>Character Builder</h1>
 	</header>
-	<main></main>
-	<script src="imagemaker.js"></script>
-	<div id="image-maker" class="imagemaker">
+	<main id="image-maker" class="imagemaker">
 		<div class="imagemaker_container_wrapper">
 			<div class="imagemaker_container">
-				<div class="imagemaker_canvas_wrapper">
+				<section class="imagemaker_canvas_wrapper">
 					<canvas id="my-canvas-object" width="600" height="600" aria-label="character preview"></canvas>
 					<a class="imagemaker_save_button" id="save" download="new_image.png">
 						Save
@@ -30,8 +29,8 @@
 						<button id="palette_button" class="button_show_colorpalette" tabindex="0"><span
 								class="sr-only">Colors</span></button>
 					</div>
-				</div>
-				<div class="imagemaker_control_wrapper">
+				</section>
+				<aside class="imagemaker_control_wrapper">
 					<div class="imagemaker_parts_menu_wrapper">
 						<div class="imagemaker_parts_menu">
 							<ul id="parts_list">
@@ -53,7 +52,7 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</aside>
 			</div>
 
 			<a class="imagemaker_logo" href="/" exact=""></a>

@@ -3,6 +3,8 @@
     --loading-bg-color: #FFFFFF;
     /* the color of the border around selected part and icon buttons */
     --select-color: #FF0000;
+    /* the color of the focus ring */
+    --focus-color: #0008ff;
     /* the color/image filepath of the background of the image display area */
     --image-background-color: hsla(0,0%,93.3%,.5);
     --image-background-png: "none";
@@ -30,6 +32,10 @@
     min-width: 0;
     word-wrap: break-word;
     box-sizing: border-box;
+}
+
+*:focus {
+    outline: 3px solid --focus-color;
 }
 
 body {
