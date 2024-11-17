@@ -7,7 +7,7 @@
     --image-background-color: hsla(0,0%,93.3%,.5);
     --image-background-png: "none";
     /* the color/image filepath of the random button */
-    --random-button-color: #ffbd15;
+    --random-button-color: #9d05f0;
     --random-button-png: "none";
     /* the color/image filepath of the items menu background*/
     --control-panel-color: #ccc;
@@ -20,15 +20,9 @@
     /* the color/image filepath of the palette toggle button */
     --palette-toggle-color: #fff;
     --palette-toggle-svg: url("imagemakerAssets/palette_toggle.svg");
-    /* the color/image filepath of the info button */
-    --info-toggle-color: #fff;
-    --info-toggle-png: "none";
-    /* the color/image filepath of the info button */
-    --move-toggle-color: #fff;
-    --move-toggle-svg: url("imagemakerAssets/move_toggle.svg");
     /* the image filepath of the logo */
     --logo-png: "none";
-    --save-button-color: #00b33c;
+    --save-button-color: #008a2e;
 }
 
 * {
@@ -56,9 +50,6 @@ body {
 	white-space: nowrap !important;            /* 3 */
 }
 
-.imagemaker {
-    height: 100%;
-}
 
 @media (orientation: landscape) {
     .imagemaker_container_wrapper {
@@ -98,15 +89,6 @@ body {
 	height: 100%
     }
 
-    .imagemaker_info_show_button {
-	position: absolute;
-	top: auto;
-	right: auto;
-	bottom: 4px;
-	left: 4px;
-	width: 50px;
-	height: 50px;
-    }
 
     .imagemaker_random_button {
 	min-width: 60px;
@@ -149,9 +131,7 @@ body {
 	height: 48px;
     }
 
-    .imagemaker_info_content {
-	font-size: 3vh;
-    }
+
 }
 
 @media (orientation: portrait) {
@@ -190,17 +170,6 @@ body {
 	display: flex;
 	flex-direction: column;
 	height: 100%
-    }
-
-    .imagemaker_info_show_button {
-	position: absolute;
-	top: 4px;
-	right: 4px;
-	bottom: auto;
-	left: auto;
-	height: 6vh;
-	width: 6vh;
-	font-size: 5vh
     }
 
     .imagemaker_parts_menu_wrapper {
@@ -501,22 +470,6 @@ body {
     position: absolute;
 }
 
-.imagemaker_info_show_button {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--info-toggle-color, #fff);
-    background-image: var(--info-toggle-png, "none");
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #333;
-    border: 0 solid #aaa;
-    border-radius: 50%;
-    cursor: pointer;
-    text-align: center;
-    z-index: 20;
-}
-
 .imagemaker_logo {
     position: absolute;
     top: 6px;
@@ -536,24 +489,6 @@ body {
 
 .selected {
     border: 3px solid var(--select-color, #ff0000);
-}
-
-.imagemaker_info_wrapper {
-    height: 100%;
-    background-color: #eeeeee;
-    position: absolute;
-    top: 4px;
-    right: 4px;
-    bottom: 4px;
-    left: 4px;
-    height: calc(100% - 8px);
-    overflow: hidden;
-    z-index: 10;
-    display: none;
-}
-
-.imagemaker_info_content {
-    margin: 10px;
 }
 
 .imagemaker_colorpalette {
