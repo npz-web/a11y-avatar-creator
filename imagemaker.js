@@ -225,7 +225,7 @@ window.addEventListener('load', function(ev) {
      */
     function initPartsElements() {
 	for (let i = 0; i < parts.length; i++) {	
-	    let part = document.createElement('li');
+	    let part = document.createElement('button');
 	    let partIcon = document.createElement('img');
 	    partIcon.src = assetsPath + parts[i].folder + "/icon.png";
 	    part.appendChild(partIcon);
