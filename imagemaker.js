@@ -85,33 +85,11 @@ window.addEventListener('load', function(ev) {
      * Assign functions to buttons.
      */
     function initButtons() {
-	randomButton.addEventListener('click', randomize).addEventListener("keypress", function(event) {
-		if (event.key === "Enter") {
-		  event.preventDefault();
-		  document.getElementById(randomButton).click();
-		}
-	  });
-	infoButton.addEventListener('click', toggleInfo).addEventListener("keypress", function(event) {
-		if (event.key === "Enter") {
-		  event.preventDefault();
-		  document.getElementById(infoButton).click();
-		}
-	  });
-	paletteButton.addEventListener('click', togglePalette).addEventListener("keypress", function(event) {
-		if (event.key === "Enter") {
-		  event.preventDefault();
-		  document.getElementById(paletteButton).click();
-		}
-	  });
-	itemsButton.addEventListener('click', toggleItems).addEventListener("keypress", function(event) {
-		if (event.key === "Enter") {
-		  event.preventDefault();
-		  document.getElementById(itemsButton).click();
-		}
-	  });
+	randomButton.addEventListener('click', randomize);
+	paletteButton.addEventListener('click', togglePalette);
+	itemsButton.addEventListener('click', toggleItems);
 	return null;
     }
-
 
     /**
      * Initialize partsElements, itemsElements
