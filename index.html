@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8"/>
     <link rel="stylesheet" href="index.css">
+	<title>Character Builder</title>
   </head>
   <body>
     <script src="imagemaker.js"></script> 
@@ -18,7 +19,7 @@
 	</div>
 	<div class="imagemaker_container">
 	  <div class="imagemaker_canvas_wrapper">
-	    <canvas id="my-canvas-object" width="600" height="600"></canvas>
+	    <canvas id="my-canvas-object" width="600" height="600" aria-label="character preview"></canvas>
 	    <a class="imagemaker_save_button" id="save" download="new_image.png">
 	      Save
 	    </a>
@@ -26,8 +27,8 @@
 	      Loading...
 	    </a>
 	    <div class="imagemaker_ctrl_buttons">
-	      <button id="items_button" class="button_show_itemlist">Items</button>
-	      <button id="palette_button" class="button_show_colorpalette">Colors</button>
+	      <button id="items_button" class="button_show_itemlist"><span class="sr-only">Items</span></button>
+	      <button id="palette_button" class="button_show_colorpalette"><span class="sr-only">Colors</span></button>
 	    </div>	    
 	  </div>
 	  <div class="imagemaker_control_wrapper">
