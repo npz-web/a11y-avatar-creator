@@ -2,6 +2,8 @@
 
 hackrew is a framework for making character creator/dressup game applets a la [picrew](https://picrew.me/). You can check out an online demo [here](https://ksadov.github.io/hackrew/), or see a more complex version on [Neocities](https://cherrvak.neocities.org/furrycreator/index.html). To make your own character creator, fork this repo or download the files and follow the instructions below.
 
+This builder uses hackrew as a base, and implements some accessibility improvements to allow more users to interact with it. 
+
 ## Instructions
 
 ### Step 1: start a web server
