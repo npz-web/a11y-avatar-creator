@@ -56,3 +56,5 @@ To change the colors and graphics of the UI, edit the variables at the top of in
 The only files that you need to host your applet are index.html, index.css imagemaker.js, and the imagemakerAssets folder. To host on Github pages, fork this repo, customize the files, and follow the intrucutions [here](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site).
 
 Since this repo generates a static site, you can turn on Github Pages in the Settings of the Repo and it should automatically deploy for you, detecting the presence of an index.html file. It will host your builder at `yourRepoName.github.io`. You can change the name of your repository to get a URL you like.
+
+Pushing your changes to main will trigger a deploy.
