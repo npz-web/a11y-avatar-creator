@@ -86,7 +86,6 @@ window.addEventListener('load', function(ev) {
      */
     function initButtons() {
 	randomButton.addEventListener('click', randomize);
-	infoButton.addEventListener('click', toggleInfo);
 	paletteButton.addEventListener('click', togglePalette);
 	itemsButton.addEventListener('click', toggleItems);
 	return null;
@@ -107,7 +106,7 @@ window.addEventListener('load', function(ev) {
      function initPalette() {
 	for (let i = 0; i < parts.length; i++) {
 	    for (let j = 0; j < parts[i].colors.length; j++) {
-		let colorElement = document.createElement('li');
+		let colorElement = document.createElement('button');
 		colorElement.style.backgroundColor = "#" + parts[i].colors[j];
 		colorElement.addEventListener('click', function() {
 		    selectColor(i, j);
@@ -226,7 +225,7 @@ window.addEventListener('load', function(ev) {
      */
     function initPartsElements() {
 	for (let i = 0; i < parts.length; i++) {	
-	    let part = document.createElement('li');
+	    let part = document.createElement('button');
 	    let partIcon = document.createElement('img');
 	    partIcon.src = assetsPath + parts[i].folder + "/icon.png";
 	    part.appendChild(partIcon);
@@ -249,7 +248,7 @@ window.addEventListener('load', function(ev) {
 	}
 	for (let i = 0; i < parts.length; i++) {
 	    if (parts[i].noneAllowed) {
-		let noneButton = document.createElement('li');
+		let noneButton = document.createElement('button');
 		let noneButtonIcon = document.createElement('img');
 		noneButtonIcon.src = assetsPath + "none_button.svg";
 		noneButton.appendChild(noneButtonIcon);
@@ -258,7 +257,7 @@ window.addEventListener('load', function(ev) {
 		itemsElements[i][0] = noneButton;
  	    }
 	    for (let j = 0; j < parts[i].items.length; j++) {
-		let item = document.createElement('li');
+		let item = document.createElement('button');
 		let itemIcon = document.createElement('img');
 		itemIcon.id = "icon_" + i.toString() + "_" + j.toString();
 		itemIcon.src = (assetsPath +

@@ -2,6 +2,8 @@
 
 hackrew is a framework for making character creator/dressup game applets a la [picrew](https://picrew.me/). You can check out an online demo [here](https://ksadov.github.io/hackrew/), or see a more complex version on [Neocities](https://cherrvak.neocities.org/furrycreator/index.html). To make your own character creator, fork this repo or download the files and follow the instructions below.
 
+This builder uses hackrew as a base, and implements some accessibility improvements to allow more users to interact with it. 
+
 ## Instructions
 
 ### Step 1: start a web server
@@ -51,11 +53,10 @@ The script will take a while to run, but at the end you'll have your color varia
 ### Step 4: edit the UI
 To change the colors and graphics of the UI, edit the variables at the top of index.css.
 
-### Step 5: host your applet
+### Step 5: host your avatar builder
 
 The only files that you need to host your applet are index.html, index.css imagemaker.js, and the imagemakerAssets folder. To host on Github pages, fork this repo, customize the files, and follow the intrucutions [here](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site).
 
-To host on Neocities, make a new folder to contain your project (in my [example page](https://cherrvak.neocities.org/furrycreator/index.html), the folder is called "furrycreator"). Place the files index.html, index.css and imagemaker.js in this folder. Then place the folder imagemakerAssets in the same directory, but be careful to preserve the subfolder structure: the Neocities drag-and-drop GUI won't preserve the seperate folders for each part, which will break the code, so you're better off making a folder called imagemakerAssets and dragging-and-dropping in each part folder one-by-one. Then your completed applet will be on the page `https://your-neocities-page.neocities.org/your-folder-name/` (ex: https://cherrvak.neocities.org/furrycreator/)
+Since this repo generates a static site, you can turn on Github Pages in the Settings of the Repo and it should automatically deploy for you, detecting the presence of an index.html file. It will host your builder at `yourRepoName.github.io`. You can change the name of your repository to get a URL you like.
 
-## TODO
-- Add item shift button or draggable items?
+Pushing your changes to main will trigger a deploy.
