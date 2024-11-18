@@ -253,8 +253,10 @@ window.addEventListener('load', function(ev) {
 		let noneButtonIcon = document.createElement('img');
 		noneButtonIcon.src = assetsPath + "none_button.svg";
 		noneButton.appendChild(noneButtonIcon);
+		noneButtonIcon.alt = "none";
 		document.getElementById("itemlist_list").appendChild(noneButton);
 		noneButton.style.display = "none";
+		
 		itemsElements[i][0] = noneButton;
  	    }
 	    for (let j = 0; j < parts[i].items.length; j++) {
