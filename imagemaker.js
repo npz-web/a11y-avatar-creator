@@ -113,6 +113,7 @@ window.addEventListener('load', function(ev) {
 		});
 		colorElement.id = "color_" + i.toString() + "_" + j.toString();
 		colorElement.style.display = "none";
+		colorElement.ariaLabel = parts[i].folder.toString() + " " + ntc.name(parts[i].colors[j])[1];
 		document.getElementById("colorpalette_list").appendChild(colorElement);
 	    }
 	}
@@ -231,6 +232,7 @@ window.addEventListener('load', function(ev) {
 	    part.appendChild(partIcon);
 	    part.id = "part_" + i.toString();
             document.getElementById('parts_list').appendChild(part);
+		partIcon.alt = parts[i].folder.toString()
 	    partsElements[i] = part;
 	}
 	return null;
@@ -252,8 +254,10 @@ window.addEventListener('load', function(ev) {
 		let noneButtonIcon = document.createElement('img');
 		noneButtonIcon.src = assetsPath + "none_button.svg";
 		noneButton.appendChild(noneButtonIcon);
+		noneButtonIcon.alt = "none";
 		document.getElementById("itemlist_list").appendChild(noneButton);
 		noneButton.style.display = "none";
+		
 		itemsElements[i][0] = noneButton;
  	    }
 	    for (let j = 0; j < parts[i].items.length; j++) {
@@ -263,6 +267,7 @@ window.addEventListener('load', function(ev) {
 		itemIcon.src = (assetsPath +
 				parts[i].folder + "/" +
 				parts[i].items[j] + ".png");
+		itemIcon.alt = parts[i].folder + " " +parts[i].items[j].toString();
 		item.appendChild(itemIcon);
 		item.id = "item_" + i.toString() + "_" + j.toString();
 		item.style.display = "none";
