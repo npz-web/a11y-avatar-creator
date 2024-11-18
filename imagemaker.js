@@ -113,6 +113,7 @@ window.addEventListener('load', function(ev) {
 		});
 		colorElement.id = "color_" + i.toString() + "_" + j.toString();
 		colorElement.style.display = "none";
+		colorElement.ariaLabel = parts[i].folder.toString() + " " + ntc.name(parts[i].colors[j])[1];
 		document.getElementById("colorpalette_list").appendChild(colorElement);
 	    }
 	}
@@ -266,7 +267,7 @@ window.addEventListener('load', function(ev) {
 		itemIcon.src = (assetsPath +
 				parts[i].folder + "/" +
 				parts[i].items[j] + ".png");
-		itemIcon.alt = parts[i].items[j].toString();
+		itemIcon.alt = parts[i].folder + " " +parts[i].items[j].toString();
 		item.appendChild(itemIcon);
 		item.id = "item_" + i.toString() + "_" + j.toString();
 		item.style.display = "none";

@@ -500,7 +500,7 @@ body {
     -webkit-overflow-scrolling: touch;
 }
 
-.imagemaker_colorpalette ul {
+.imagemaker_colorpalette div {
     padding: 0;
     font-size: 0;
     width: 100%;
