@@ -231,6 +231,7 @@ window.addEventListener('load', function(ev) {
 	    part.appendChild(partIcon);
 	    part.id = "part_" + i.toString();
             document.getElementById('parts_list').appendChild(part);
+		partIcon.alt = parts[i].folder.toString()
 	    partsElements[i] = part;
 	}
 	return null;
