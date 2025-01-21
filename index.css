@@ -10,6 +10,7 @@
     --image-background-png: "none";
     /* the color/image filepath of the random button */
     --random-button-color: #9d05f0;
+    --random-button-color-hover: --accent-hover;
     --random-button-png: "none";
     /* the color/image filepath of the items menu background*/
     --control-panel-color: #ccc;
@@ -25,6 +26,12 @@
     /* the image filepath of the logo */
     --logo-png: "none";
     --save-button-color: #008a2e;
+
+    /** SIMPLE CSS VARIABLE OVERRIDES **/
+    @media (prefers-color-scheme: dark) {
+         --accent-hover: #0033ff;
+    }
+
 }
 
 * {
@@ -32,6 +39,7 @@
     min-width: 0;
     word-wrap: break-word;
     box-sizing: border-box;
+    transition: background 0.5s ease;
 }
 
 button:focus-visible,
@@ -41,6 +49,18 @@ a:focus-visible {
 
 body {
     height: 90vh;
+}
+
+section {
+    margin: 0;
+    padding: 0;
+}
+
+aside {
+    float: none;
+    width: auto;
+    margin-inline-start: 0;
+    padding: 10px;
 }
 
 .sr-only {
@@ -60,6 +80,10 @@ body {
     /* 3 */
 }
 
+
+.imagemaker_parts_menu nav {
+    display: flex;
+}
 
 @media (orientation: landscape) {
     .imagemaker_container_wrapper {
@@ -182,6 +206,7 @@ body {
 
     .imagemaker_parts_menu nav {
         margin-left: 0px;
+
     }
 
     .imagemaker_itemlist div button {
@@ -189,7 +214,7 @@ body {
     }
 
     .imagemaker_parts_menu_wrapper {
-        min-height: 10vh;
+        min-height: 16vh;
     }
 
     .imagemaker_parts_menu {
@@ -317,10 +342,10 @@ body {
 .imagemaker_parts_menu_wrapper {
     flex: 0 0 70px;
     position: relative;
-    padding-left: 18.18%;
 }
 
 .imagemaker_parts_menu {
+    display: flex;
     overflow: auto;
     margin: 0;
     white-space: nowrap;
@@ -349,12 +374,6 @@ body {
 }
 
 .imagemaker_random_button {
-    position: absolute;
-    top: 0;
-    right: auto;
-    bottom: 0;
-    left: 0;
-    width: 18.18%;
     background-color: var(--random-button-color, #ffbd16);
     color: #fff;
     text-align: center;
@@ -365,6 +384,8 @@ body {
     background-image: var(--random-button-png, "none");
     background-position: center;
     background-repeat: no-repeat;
+    /* min-width: 50px;
+    min-height: 50px; */
 }
 
 .imagemaker_control_panel_wrapper {
