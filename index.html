@@ -19,6 +19,7 @@
 		<div class="imagemaker_container_wrapper">
 			<div class="imagemaker_container">
 				<section class="imagemaker_canvas_wrapper">
+					<h2>Your Avatar</h2>
 					<canvas id="my-canvas-object" width="600" height="600" aria-label="character preview"></canvas>
 					<a class="imagemaker_save_button" id="save" download="new_image.png">
 						Save
@@ -31,7 +32,8 @@
 				<aside class="imagemaker_control_wrapper">
 					<div class="imagemaker_parts_menu_wrapper">
 						<div class="imagemaker_parts_menu">
-							<nav id="parts_list">
+							<h2 class="sr-only" id="parts-menu-label">Parts Menu</h2>
+							<nav id="parts_list" aria-labelledby="parts-menu-label">
 								<button class="imagemaker_random_button" id="random_button">
 									Random
 								</button>
