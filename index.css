@@ -27,9 +27,11 @@
     --logo-png: "none";
     --save-button-color: #008a2e;
 
-    --accent-hover:  #7ec1ff;
+
 
     /** SIMPLE CSS VARIABLE OVERRIDES **/
+    --accent-hover:  #7ec1ff;
+
     @media (prefers-color-scheme: dark) {
          --accent-hover: #7ec1ff;
     }
