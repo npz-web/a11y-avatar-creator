@@ -49,6 +49,8 @@ a:focus-visible {
 
 body {
     height: 90vh;
+    display: flex;
+    flex-direction: column;
 }
 
 section {
@@ -103,16 +105,15 @@ aside {
         height: 36px;
     }
 
-    .imagemaker_ctrl_buttons {
+    /* .imagemaker_ctrl_buttons {
         position: absolute;
-        top: 10px;
         right: 65px;
-        bottom: auto;
+        bottom: 10px;
         left: auto;
         width: 50px;
         height: 50px;
         z-index: 0;
-    }
+    } */
 
     .imagemaker_control_wrapper {
         position: relative;
@@ -184,13 +185,13 @@ aside {
         font-size: 3vh;
     }
 
-    .imagemaker_ctrl_buttons {
+    /* .imagemaker_ctrl_buttons {
         position:absolute;
         bottom: 10px;
         right: 10px;
         top: auto;
         left: auto;
-    }
+    } */
 
     .imagemaker_control_wrapper {
         position: relative;
@@ -200,9 +201,9 @@ aside {
         height: 100%
     }
 
-    .imagemaker_parts_menu_wrapper {
+    /* .imagemaker_parts_menu_wrapper {
         padding-left: 18.18%;
-    }
+    } */
 
     .imagemaker_parts_menu nav {
         margin-left: 0px;
@@ -227,7 +228,6 @@ aside {
     }
 
     .imagemaker_parts_menu nav button {
-        width: 9vh;
         height: 9vh;
     }
 
@@ -329,6 +329,12 @@ aside {
 .imagemaker_ctrl_buttons {
     z-index: 0;
     display: flex;
+    display: flex;
+    background: var(--accent);
+    gap: 12px;
+    height: 115px;
+    justify-content: center;
+    align-items: center;
 }
 
 .imagemaker_control_wrapper {
@@ -365,7 +371,7 @@ aside {
 
 .imagemaker_parts_menu nav button{
     position: relative;
-    min-width: 48px;
+    min-width: 70px;
     margin: 4px 2px 4px 2px;
     display: inline-flex;
     justify-content: center;
@@ -376,6 +382,7 @@ aside {
 .imagemaker_random_button {
     background-color: var(--random-button-color, #ffbd16);
     color: #fff;
+    border: 1px var(--random-button-color) solid;
     text-align: center;
     cursor: pointer;
     display: flex;
@@ -384,8 +391,6 @@ aside {
     background-image: var(--random-button-png, "none");
     background-position: center;
     background-repeat: no-repeat;
-    /* min-width: 50px;
-    min-height: 50px; */
 }
 
 .imagemaker_control_panel_wrapper {
@@ -453,7 +458,6 @@ aside {
 }
 
 .imagemaker_ctrl_buttons .button_show_controller {
-    /* TODO: implement movable parts*/
     display: none;
     /* display: inline-flex; */
     justify-content: center;
