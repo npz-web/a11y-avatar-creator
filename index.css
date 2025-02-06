@@ -10,6 +10,7 @@
     --image-background-png: "none";
     /* the color/image filepath of the random button */
     --random-button-color: #9d05f0;
+    --random-button-color-hover: --accent-hover;
     --random-button-png: "none";
     /* the color/image filepath of the items menu background*/
     --control-panel-color: #ccc;
@@ -25,13 +26,24 @@
     /* the image filepath of the logo */
     --logo-png: "none";
     --save-button-color: #008a2e;
+
+
+
+    /** SIMPLE CSS VARIABLE OVERRIDES **/
+    --accent-hover:  #7ec1ff;
+
+    @media (prefers-color-scheme: dark) {
+         --accent-hover: #7ec1ff;
+    }
+
 }
 
 * {
-    min-height: 0;
-    min-width: 0;
+    /* min-height: 0;
+    min-width: 0; */
     word-wrap: break-word;
     box-sizing: border-box;
+    transition: background 0.5s ease;
 }
 
 button:focus-visible,
@@ -41,6 +53,20 @@ a:focus-visible {
 
 body {
     height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    margin: 0;
+    padding: 0;
+}
+
+aside {
+    float: none;
+    width: auto;
+    margin-inline-start: 0;
+    padding: 10px;
 }
 
 .sr-only {
@@ -61,9 +87,13 @@ body {
 }
 
 
+.imagemaker_parts_menu nav {
+    display: flex;
+}
+
 @media (orientation: landscape) {
     .imagemaker_container_wrapper {
-        width: 800px;
+        width: 90%;
     }
 
     .imagemaker_container {
@@ -79,16 +109,15 @@ body {
         height: 36px;
     }
 
-    .imagemaker_ctrl_buttons {
+    /* .imagemaker_ctrl_buttons {
         position: absolute;
-        top: 10px;
         right: 65px;
-        bottom: auto;
+        bottom: 10px;
         left: auto;
         width: 50px;
         height: 50px;
         z-index: 0;
-    }
+    } */
 
     .imagemaker_control_wrapper {
         position: relative;
@@ -108,6 +137,7 @@ body {
     .imagemaker_parts_menu nav {
         margin-left: 10px;
     }
+    
 
     .imagemaker_itemlist div button {
         width: 33.2%;
@@ -160,13 +190,13 @@ body {
         font-size: 3vh;
     }
 
-    .imagemaker_ctrl_buttons {
+    /* .imagemaker_ctrl_buttons {
         position:absolute;
         bottom: 10px;
         right: 10px;
         top: auto;
         left: auto;
-    }
+    } */
 
     .imagemaker_control_wrapper {
         position: relative;
@@ -176,21 +206,22 @@ body {
         height: 100%
     }
 
-    .imagemaker_parts_menu_wrapper {
+    /* .imagemaker_parts_menu_wrapper {
         padding-left: 18.18%;
-    }
+    } */
 
     .imagemaker_parts_menu nav {
         margin-left: 0px;
+
     }
 
     .imagemaker_itemlist div button {
         width: 23.75%;
     }
 
-    .imagemaker_parts_menu_wrapper {
-        min-height: 10vh;
-    }
+    /* .imagemaker_parts_menu_wrapper {
+        height: 120px;
+    } */
 
     .imagemaker_parts_menu {
         height: 100%;
@@ -202,7 +233,6 @@ body {
     }
 
     .imagemaker_parts_menu nav button {
-        width: 9vh;
         height: 9vh;
     }
 
@@ -263,6 +293,12 @@ body {
     align-items: center;
 }
 
+.imagemaker_canvas_wrapper h2 {
+    position: absolute;
+    top:0;
+    font-size: 2rem;
+}
+
 .imagemaker_save_button {
     display: flex;
     justify-content: center;
@@ -274,15 +310,12 @@ body {
     text-align: center;
     word-break: break-all;
     color: #fff;
-    cursor: pointer;
     position: absolute;
     top: 5px;
     right: auto;
     bottom: 4px;
     left: 4px;
-    background-image: var(--download-button-png, "none");
-    background-position: center;
-    background-repeat: no-repeat;
+    text-decoration: none;
 }
 
 .loading {
@@ -304,6 +337,12 @@ body {
 .imagemaker_ctrl_buttons {
     z-index: 0;
     display: flex;
+    display: flex;
+    background: var(--accent-light);
+    gap: 20px;
+    height: 115px;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .imagemaker_control_wrapper {
@@ -317,11 +356,11 @@ body {
 .imagemaker_parts_menu_wrapper {
     flex: 0 0 70px;
     position: relative;
-    padding-left: 18.18%;
 }
 
 .imagemaker_parts_menu {
-    overflow: auto;
+    display: flex;
+    overflow-x: scroll;
     margin: 0;
     white-space: nowrap;
     background-color: var(--parts-menu-color, #eee);
@@ -340,7 +379,7 @@ body {
 
 .imagemaker_parts_menu nav button{
     position: relative;
-    min-width: 48px;
+    min-width: 70px;
     margin: 4px 2px 4px 2px;
     display: inline-flex;
     justify-content: center;
@@ -349,14 +388,9 @@ body {
 }
 
 .imagemaker_random_button {
-    position: absolute;
-    top: 0;
-    right: auto;
-    bottom: 0;
-    left: 0;
-    width: 18.18%;
     background-color: var(--random-button-color, #ffbd16);
     color: #fff;
+    border: 1px var(--random-button-color) solid;
     text-align: center;
     cursor: pointer;
     display: flex;
@@ -377,12 +411,14 @@ body {
 .imagemaker_control_panel {
     position: relative;
     display: flex;
+    align-items: flex-start;
     flex-direction: column;
     height: 100%;
     min-height: 100px;
     background-color: var(--control-panel-color, #ccc);
     background-image: var(--control-panel-png, "none");
     background-repeat: no-repeat;
+    padding: 20px;
 }
 
 .imagemaker_itemlist {
@@ -393,11 +429,19 @@ body {
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
 }
+#itemlist_list {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
 
-.imagemaker_itemlist ul {
+/* .imagemaker_itemlist ul {
     padding: 0;
     margin: .5%;
-}
+} */
 
 .imagemaker_itemlist div button {
     margin: 5px;
@@ -432,7 +476,6 @@ body {
 }
 
 .imagemaker_ctrl_buttons .button_show_controller {
-    /* TODO: implement movable parts*/
     display: none;
     /* display: inline-flex; */
     justify-content: center;
@@ -490,12 +533,7 @@ body {
 }
 
 .imagemaker_colorpalette {
-    flex: 1;
-    /*display: flex;*/
-    display: none;
-    align-items: center;
-    justify-content: center;
-    overflow: auto;
+    overflow: scroll;
     padding: 4px 0;
     -webkit-overflow-scrolling: touch;
 }

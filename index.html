@@ -3,6 +3,7 @@
 
 <head>
 	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
 	<link rel="stylesheet" href="index.css">
 	<title>Character Builder</title>
 </head>
@@ -18,6 +19,7 @@
 		<div class="imagemaker_container_wrapper">
 			<div class="imagemaker_container">
 				<section class="imagemaker_canvas_wrapper">
+					<h2>Your Avatar</h2>
 					<canvas id="my-canvas-object" width="600" height="600" aria-label="character preview"></canvas>
 					<a class="imagemaker_save_button" id="save" download="new_image.png">
 						Save
@@ -25,34 +27,42 @@
 					<a class="loading" id="loading">
 						Loading...
 					</a>
-					<div class="imagemaker_ctrl_buttons">
-						<button id="items_button" class="button_show_itemlist"><span
-								class="sr-only">Items</span></button>
-						<button id="palette_button" class="button_show_colorpalette"><span
-								class="sr-only">Colors</span></button>
-						
-					</div>
+
 				</section>
 				<aside class="imagemaker_control_wrapper">
 					<div class="imagemaker_parts_menu_wrapper">
 						<div class="imagemaker_parts_menu">
-							<button class="imagemaker_random_button" id="random_button">
-								Random
-							</button>
-							<nav id="parts_list">
+							<h2 class="sr-only" id="parts-menu-label">Parts Menu</h2>
+							<nav id="parts_list" aria-labelledby="parts-menu-label">
+								<button class="imagemaker_random_button" id="random_button">
+									Random
+								</button>
 							</nav>
 						</div>
 					</div>
 					<div class="imagemaker_control_panel_wrapper">
 						<div class="imagemaker_control_panel">
+							<div class="imagemaker_ctrl_buttons">
+								<button id="items_button" class="button_show_itemlist"><span
+										class="sr-only">Items</span></button>
+								<button id="palette_button" class="button_show_colorpalette"><span
+										class="sr-only">Colors</span></button>
+							</div>
+
+							
 							<div id="imagemaker_itemlist" class="imagemaker_itemlist">
+								<h2 class="sr-only">Variations</h2>
 								<div id="itemlist_list">
 								</div>
 							</div>
+
+							
 							<div id="imagemaker_colorpalette" class="imagemaker_colorpalette">
+								<h2 class="sr-only">Colors</h2>
 								<div id="colorpalette_list">
 								</div>
 							</div>
+
 						</div>
 					</div>
 				</aside>
@@ -60,7 +70,7 @@
 
 			<a class="imagemaker_logo" href="/" exact=""></a>
 		</div>
-	</div>
+		</div>
 	</main>
 	<footer>
 		<div id="info_wrap" class="imagemaker_info_wrapper">
