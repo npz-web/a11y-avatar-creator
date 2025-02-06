@@ -296,6 +296,7 @@ aside {
 .imagemaker_canvas_wrapper h2 {
     position: absolute;
     top:0;
+    font-size: 2rem;
 }
 
 .imagemaker_save_button {
@@ -362,7 +363,7 @@ aside {
 
 .imagemaker_parts_menu {
     display: flex;
-    overflow: auto;
+    overflow-x: scroll;
     margin: 0;
     white-space: nowrap;
     background-color: var(--parts-menu-color, #eee);
@@ -534,12 +535,7 @@ aside {
 }
 
 .imagemaker_colorpalette {
-    flex: 1;
-    /*display: flex;*/
-    display: none;
-    align-items: center;
-    justify-content: center;
-    overflow: auto;
+    overflow: scroll;
     padding: 4px 0;
     -webkit-overflow-scrolling: touch;
 }
