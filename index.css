@@ -310,15 +310,12 @@ aside {
     text-align: center;
     word-break: break-all;
     color: #fff;
-    cursor: pointer;
     position: absolute;
     top: 5px;
     right: auto;
     bottom: 4px;
     left: 4px;
-    background-image: var(--download-button-png, "none");
-    background-position: center;
-    background-repeat: no-repeat;
+    text-decoration: none;
 }
 
 .loading {
@@ -414,6 +411,7 @@ aside {
 .imagemaker_control_panel {
     position: relative;
     display: flex;
+    align-items: flex-start;
     flex-direction: column;
     height: 100%;
     min-height: 100px;
