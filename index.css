@@ -293,6 +293,11 @@ aside {
     align-items: center;
 }
 
+.imagemaker_canvas_wrapper h2 {
+    position: absolute;
+    top:0;
+}
+
 .imagemaker_save_button {
     display: flex;
     justify-content: center;
